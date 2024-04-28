@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('img2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+</style>
+    <h2>Logger</h2>
+    <!-- <p>Welcome to the Logger!</p> -->
+    <!-- <a href="/login">Login</a><br> -->
+    <a href="/files">Files</a><br>
+    <!-- <a href="/change_speed">Change can bus speed</a><br> -->
+    <!-- <a href="/logout">Logout</a> -->
+
+    <h3>Select speed can bus:</h3>
+    <form action="/change_speed0" method="post">
+        <label for="bus_speed">Choose a speed for can 0:</label><br>
+        <select id="bus_speed" name="bus_speed">
+            <option value="250">250 kbit/s</option>
+            <option value="500">500 kbit/s</option>
+            <option value="1000">1000 kbit/s</option>
+        </select><br>
+        <input type="submit" value="Change speed">
+    </form><br>
+    <!-- <h3>Select speed can bus:</h3> -->
+    <form action="/change_speed1" method="post">
+        <label for="bus_speed">Choose a speed for can 1:</label><br>
+        <select id="bus_speed" name="bus_speed">
+            <option value="250">250 kbit/s</option>
+            <option value="500">500 kbit/s</option>
+            <option value="1000">1000 kbit/s</option>
+        </select><br>
+        <input type="submit" value="Change speed">
+    </form><br>
+    <form action="/command_line" method="post">
+        <input type="text" value="my command" name="my_command">
+        <input type="submit" value="Execute command">
+    </form><br>
+    <form action="/reboot" method="post">
+        <input type="submit" value="Reboot system">
+    </form><br>
+
+</body>
+</html>
